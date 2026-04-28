@@ -7,15 +7,18 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Oregano:ital@0;1&family=Permanent+Marker&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-   <nav class="navbar navbar-expand-lg bg-light p-4 px-5">
+   <nav class="navbar navbar-expand-lg p-4 px-5">
     <div class="container-fluid px-0">
-        <a class="navbar-brand text-dark jostas-logo" href="#">
-            Jostas <span>Painting Services</span>
+        <a class="navbar-brand jostas-logo" href="#">
+            Jostas<span>Painting Ser.</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,7 +28,7 @@
                 <a class="nav-link text-dark mx-3 opacity-75" aria-current="page" href="index.html">Home</a>
                 <a class="nav-link text-dark mx-3 opacity-75" href="about.html">About</a>
                 <a class="nav-link text-dark mx-3 opacity-75" href="services.html">Services</a>
-                <a class="nav-link text-dark mx-3 opacity-75" href="services.html#contact">Contact</a>
+                <a class="nav-link text-dark mx-3 opacity-75" href="contact.html">Contact</a>
             </div>
         </div>
     </div>
@@ -36,47 +39,59 @@
         <div class="row w-100 mx-0">
             <div class="col-lg-6 d-flex align-items-center hero-text-wrapper min-vh-100 py-5">
                 <div>
-                    <h1>Adding color to your world</h1>
+                    <h1>Where every wall tells a story.</h1>
                     <a href="services.html#contact" class="btn btn-primary cta-button-custom rounded-1">Get a Free Quote</a>
                 </div>
             </div>
             </div>
     </div>
     
-    <div class="hero-image-container d-none d-lg-block">
-        <img src="/assets/images/Image9.png" alt="Painter adding color to a wall" class="img-fluid">
+    
     </div>
 </section> 
 <section class="container-fluid services-cards-section position-relative" style="margin-top: -100px; z-index: 10;">
     <div class="row justify-content-center g-4 px-5">
         
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4 col-md-6">
+        <a href="services.html#recreational" class="service-link">  
             <div class="card service-card p-4 rounded-3 shadow-sm bg-white text-center">
-                <div class="card-icon mb-3">[Icon Placeholder]</div> 
-                <h5 class="card-title text-uppercase fw-bold text-dark">Residential</h5>
+                <div class="card-icon mb-3">
+                            <svg class="service-icon" viewBox="0 0 640 640">
+                                <path fill="currentColor" d="M320 96C302.3 96 288 110.3 288 128L288 320L128 320C110.3 320 96 334.3 96 352C96 369.7 110.3 384 128 384L288 384L288 544C288 561.7 302.3 576 320 576C337.7 576 352 561.7 352 544L352 384L512 384C529.7 384 544 369.7 544 352C544 334.3 529.7 320 512 320L352 320L352 128C352 110.3 337.7 96 320 96z"/>
+                            </svg>
+                        </div>
+                <h5 class="card-title text-uppercase fw-bold text-dark">Recreational centers</h5>
             </div>
+        </a>
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4 col-md-6">
+        <a href="services.html#urban" class="service-link">   
             <div class="card service-card p-4 rounded-3 shadow-sm bg-white text-center">
-                <div class="card-icon mb-3">[Icon Placeholder]</div>
-                <h5 class="card-title text-uppercase fw-bold text-dark">Commercial</h5>
+                <div class="card-icon mb-3">
+                            <svg class="service-icon" viewBox="0 0 640 640">
+                                <path fill="currentColor" d="M96 544L96 224C96 206.3 110.3 192 128 192L256 192L256 96C256 78.3 270.3 64 288 64L512 64C529.7 64 544 78.3 544 96L544 544C544 561.7 529.7 576 512 576L128 576C110.3 576 96 561.7 96 544zM160 256L160 320L224 320L224 256L160 256zM160 352L160 416L224 416L224 352L160 352z"/>
+                            </svg>
+                        </div>
+                <h5 class="card-title text-uppercase fw-bold text-dark">Urben Spaces </h5>
             </div>
+        </a>
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4 col-md-6">
+        <a href="services.html#commercial" class="service-link"> 
             <div class="card service-card p-4 rounded-3 shadow-sm bg-white text-center">
-                <div class="card-icon mb-3">[Icon Placeholder]</div>
-                <h5 class="card-title text-uppercase fw-bold text-dark">Interior</h5>
+                <div class="card-icon mb-3">
+                            <svg class="service-icon" viewBox="0 0 640 640">
+                                <path fill="currentColor" d="M96 352L96 544C96 561.7 110.3 576 128 576L288 576L288 416C288 398.3 302.3 384 320 384L384 384C401.7 384 416 398.3 416 416L416 576L512 576C529.7 576 544 561.7 544 544L544 288C544 279.5 540.6 271.3 534.6 265.4L361.4 92.2C348.9 79.7 329.1 79.7 316.6 92.2L96 352z"/>
+                            </svg>
+                        </div>
+                <h5 class="card-title text-uppercase fw-bold text-dark">Commercial & Residential</h5>
             </div>
+        </a>
         </div>
 
-        <div class="col-lg-3 col-md-6">
-            <div class="card service-card p-4 rounded-3 shadow-sm bg-white text-center">
-                <div class="card-icon mb-3">[Icon Placeholder]</div>
-                <h5 class="card-title text-uppercase fw-bold text-dark">Exterior</h5>
-            </div>
-        </div>
+        
     </div>
 </section>
 <section class="container-fluid py-5 mt-5">
@@ -86,49 +101,58 @@
             <h2 class="display-6 fw-bold text-dark mb-4">About Jostas</h2>
             
             <p class="text-secondary mb-4" style="line-height: 1.8;">
-                This tancapape nne alio enit renshendore dlond nobriene tu kuammu shurois anpuvedrdahit isreinu, 
-                ecit busepil tawi telil din uret condilerumas materielia.
+              Born from the streets, built for the city. Jostas started as a crew of artists who believed public and recreational spaces deserve more than plain grey walls. We bring colour, craft, and character to parks, courts, community centres, and urban landmarks.  
             </p>
             
-            <a href="#about" class="text-decoration-none fw-bold" style="color: var(--color-cta);">
-                Learn More
-            </a>
             
-            <hr class="mt-5 mb-5" style="border-top: 2px solid #ddd; width: 50px; margin-left: 0;">
-
-            <h2 class="display-6 fw-bold text-dark mb-4">Portfolio</h2>
-
-            <div class="row g-4">
-                <div class="col-12 mb-4">
-                    <div class="portfolio-image-container" style="height: 400px; background-color: #e8d0bd;">
-                        <img src="/assets/images/Image3.png" alt="Portfolio Image 1" class="img-fluid w-100 h-100 object-fit-cover">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="portfolio-image-container" style="height: 250px; background-color: #d8c2b0;">
-                        <img src="/assets/images/Image1.png" alt="Portfolio Image 2" class="img-fluid w-100 h-100 object-fit-cover">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="portfolio-image-container" style="height: 250px; background-color: #f7e9d7;">
-                        <img src="/assets/images/Image5.png" alt="Portfolio Image 3" class="img-fluid w-100 h-100 object-fit-cover">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-5 offset-lg-1 d-flex align-items-start">
-            <div class="about-image-block w-100">
-                <div style="background-color: #e0b08e; height: 600px; margin-top: 150px;">
-                    <img src="/assets/images/Image2.png" alt="Textured wall painting" class="img-fluid w-100 h-100 object-fit-cover">
-                </div>
-            </div>
-        </div>
     </div>
 </section>
+
+
+<footer class="footer bg-dark text-white py-4 mt-5">
+  <div class="container">
+    
+    <div class="row">
+
+      <!-- Brand -->
+      <div class="col-lg-4 mb-3">
+        <h5>Jostas Painting</h5>
+        <p class="small opacity-75">
+          Professional painting services for homes and businesses.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-4 mb-3">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="services.html" class="footer-link">Services</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="col-lg-4 mb-3">
+        <h6>Follow Us</h6>
+        <div class="d-flex gap-3">
+          <a href="#" class="footer-icon"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="border-light">
+
+    <div class="text-center small">
+      © 2026 Jostas Painting Services
+    </div>
+
+  </div>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

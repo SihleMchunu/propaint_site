@@ -1,20 +1,55 @@
 :root {
-        --bs-dark: #333333; /* Dark text/accent */
-        --bs-light: #fdfaf7; /* Off-white background */
-        --color-hero-bg: #b97652; /* Burnt orange/terracotta */
-        --color-cta: #8a4e32; /* Slightly darker CTA button */
-    }
+    --color-primary: #1A0D2E;   /* Deep purple */
+    --color-secondary: #6B3FA0; /* Royal purple */
+    --color-accent: #C9A84C;    /* Dirty gold */
+
+    --bs-dark: #1A0D2E;
+    --bs-light: #f5f5f7; /* softer neutral background */
+
+    --font-heading: "Permanent Marker", cursive;
+    --font-subheading: "Merienda", cursive; 
+    --font-body: "Poppins", sans-serif; 
+
+    --color-hero-bg: #1A0D2E;
+    --color-cta: #6B3FA0;
+}
 
     body {
-        font-family: 'Poppins', sans-serif;
-        background-color: var(--bs-light);
-        color: var(--bs-dark);
-    }
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bs-light);
+    color: var(--color-primary);
+}
+.navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+.hero-image-container {
+    z-index: 0;
+}
+
+.navbar {
+    background-color: var(--color-primary);
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-size: 1.25rem;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-accent) !important;
+}
+
+.jostas-logo {
+    color: white;
+}
     
     /* Custom Logo Style */
     .jostas-logo {
         font-size: 1.5rem; /* 24px */
         font-weight: 700;
+        color: var(--color-accent); /* gold */
         line-height: 1;
     }
     .jostas-logo span {
@@ -25,13 +60,15 @@
 
     /* Custom Hero Styles */
     .hero-section {
-        background-color: var(--color-hero-bg);
-        position: relative;
-        overflow: hidden;
-        min-height: 550px;
-        color: var(--bs-light); /* Light text on dark background */
-        padding: 0;
-    }
+    background: url('../Photos/cover.webp') center/cover no-repeat;
+    position: relative;
+    min-height: 550px;
+    
+}
+
+
+
+
 
     .hero-content {
         /* Custom padding to match mockup's left alignment */
@@ -39,18 +76,35 @@
     }
     
     /* Custom CTA Button Style */
-    .cta-button-custom {
-        background-color: var(--color-cta) !important;
-        border-color: var(--color-cta) !important;
-        color: var(--bs-light) !important;
-        padding: 15px 30px;
-        font-weight: 600;
-        width: fit-content;
-    }
-    .cta-button-custom:hover {
-        background-color: #6d3a24 !important; /* Darker hover */
-        border-color: #6d3a24 !important;
-    }
+   .cta-button-custom {
+    background-color: var(--color-secondary) !important;
+    border: none;
+    color: white !important;
+    font-size:1.2rem;
+    padding:0.6rem 1.4rem; 
+}
+
+.cta-button-custom:hover {
+    background-color: var(--color-accent) !important;
+    color: black !important;
+}
+
+    .social-btn {
+  width: 40px;
+  height: 40px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #333;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  background: var(--color-accent);
+  
+}
 
     /* Image Positioning */
     .hero-image-container {
@@ -67,47 +121,118 @@
         object-fit: cover;
         opacity: 0.9;
     }
+
+    p {
+    font-size: 1.2rem; /* default is 1rem (16px), this makes it 17.6px */
+}
     
     /* Ensure content is above image */
     .hero-text-wrapper {
         z-index: 2;
         position: relative;
+
+
     }
 
+
+    h1, h2, .jostas-logo {
+    font-family: var(--font-heading);
+    font-weight: 400; /* Permanent Marker only has one weight, keep it 400 */
+}
+
+    h3, .card-title, .jostas-logo span {
+    font-family: var(--font-subheading);
+    font-weight: 700; /* Merienda supports 400–700 */
+}
+
+ 
     /* Custom H1 style for large, impactful text */
     .hero-text-wrapper h1 {
-        font-size: 4.5rem; /* ~72px, large size */
-        font-weight: 700;
-        line-height: 1.1;
-        max-width: 450px;
-    }
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    font-weight: 400; /* important — don't use 700, it won't change anything */
+    line-height: 1.1;
+    max-width: 450px;
+}
 
     /* ... (Existing :root variables and body styles from the previous response) ... */
 
     /* Custom styles for the service cards */
     .service-card {
-        border: none; /* Remove default Bootstrap card border */
-        transition: transform 0.3s ease;
-        min-height: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    background-color: white;
+    border: none;
+}
 
-    .service-card:hover {
-        transform: translateY(-5px); /* Subtle lift on hover */
-    }
+.service-section a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+}
 
-    .card-icon {
-        /* Placeholder for actual icon styling */
-        width: 40px;
-        height: 40px;
-        background-color: var(--color-cta); /* Use the accent color for icons */
-        border-radius: 50%;
-        /* Add properties to center an actual icon inside if used */
-    }
+.service-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.service-link:hover .service-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.service-section img {
+    transition: transform 0.4s ease;
+}
+
+.service-section a:hover img {
+    transform: scale(1.08);
+}
+
+[data-aos] {
+    will-change: transform, opacity;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(26, 13, 46, 0.2);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-secondary); /* purple */
+    border-radius: 12px;
+    margin: auto; /* helps centering */
+    transform: translateY(1px);
     
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-secondary); /* purple */
+    border-radius: 12px;
+    margin: auto; /* helps centering */
+    transform: translateY(1px);
+    
+}
+
+.service-card:hover .card-icon {
+    background: var(--color-accent); /* gold */
+    transform: translateY(-6px) scale(1.05);
+}
+
+.service-card:hover .servic-icon {
+    background: var(--color-accent); /* gold */
+    transform: translateY(-6px) scale(1.05);
+}
+
+.service-card:hover .card-icon {
+    color: var(--color-accent);
+}
     .card-title {
         font-size: 1rem;
         letter-spacing: 0.5px;
@@ -191,6 +316,20 @@
     .form-control, .form-select {
         border-radius: 5px !important;
     }
+
+    footer {
+    background-color: var(--color-hero-bg);
+    color: white;
+}
+
+.footer-icon {
+    background: var(--color-secondary);
+}
+
+.footer-icon:hover {
+    background: var(--color-accent);
+    color: black;
+}
 /*.social-links a {
   color: #333;
   font-size: 24px;
@@ -218,23 +357,13 @@
 }
 
 .social-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: black;
+  background: var(--color-primary);
   color: white;
-  font-size: 20px;
-  text-decoration: none;
-  transition: all 0.3s ease;
 }
 
 .social-btn:hover {
-  background-color: white;
+  background: var(--color-accent);
   color: black;
-  border: 2px solid black;
 }
 
 
